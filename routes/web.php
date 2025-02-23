@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
-    return view('index');
+    return view('auth.login');
 });
 
 if (file_exists($adminRoutes = __DIR__.'/admin.php')) {
@@ -15,7 +15,7 @@ Auth::routes();
 
 Route::middleware(['auth', 'user-access:employee'])->group(function () {
   
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', action: [HomeController::class, 'index'])->name('home');
 });
 
 // Route::middleware(['auth', 'user-access:superadmin'])->group(function () {

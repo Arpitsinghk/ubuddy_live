@@ -11,7 +11,7 @@
                 <div class="login-right">
                     <div class="login-right-wrap">
                         <h1>Welcome to ubuddy</h1>
-                        <p class="account-subtitle">Need an account? <a href="{{ route('register') }}">Sign Up</a></p>
+                        <!-- <p class="account-subtitle">Need an account? <a href="{{ route('register') }}">Sign Up</a></p> -->
                         <h2>Sign in</h2>
 
                         <form method="POST" action="{{ route('login') }}">
